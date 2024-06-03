@@ -15,14 +15,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 定义 GET 请求接口
-@app.get("/get")
-def get_data():
-    return {"Cumulative_Mileage": "get方法"}
-
 # 定义 POST 请求接口用于预测
-@app.post("/post")
-def post_data(
+@app.post("/submit_data")
+async def submit_data(
     cumulative_mileage: str = Form(...),  # 累计里程
     vehicle_speed: str = Form(...),       # 车速
     total_voltage: str = Form(...),       # 总电压
@@ -74,7 +69,7 @@ def post_data(
 
 # 定义 POST 请求接口用于上传 CSV 文件并进行模型训练
 @app.post("/upload-csv/")
-async def upload_csv(file: UploadFile = File(...), target_column: str = Form(...)):
+async def upload_csv(file: UploadFile = File(...), target_column: str = Form(...), test_size: str = Form(...), random_state: str = Form(...)):
     try:
         # 保存上传的文件
         file_location = f"temp_{file.filename}"
@@ -82,7 +77,7 @@ async def upload_csv(file: UploadFile = File(...), target_column: str = Form(...
             file_object.write(file.file.read())
         
         # 运行线性回归模型训练
-        r2, mse = PredictionModel.run_linear_regression(file_location, target_column)
+        r2, mse = PredictionModel.run_linear_regression(file_location, target_column, test_size, random_state)
         
         # 删除临时文件
         os.remove(file_location)

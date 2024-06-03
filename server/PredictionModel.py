@@ -4,7 +4,14 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_squared_error
 import joblib
 
-def run_linear_regression(data_path, target_column, test_size=0.3, random_state=42):
+"""
+data_path: CSV 数据文件的路径
+target_column: 目标列的名称，即需要预测的变量
+test_size: 测试集占总数据的比例(默认值为 0.3)
+random_state: 随机种子，用于确保结果的可重复性(默认值为 42)
+"""
+
+def run_linear_regression(data_path, target_column, test_size, random_state):
     # 读取数据
     data = pd.read_csv(data_path)
     # 准备特征数据和目标数据
