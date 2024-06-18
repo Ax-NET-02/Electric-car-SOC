@@ -1,0 +1,21 @@
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="累计里程">
+          <el-input v-model="form.cumulative_mileage" />
+        </el-form-item>
+      </div>
+    </el-col>
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="车速">
+          <el-input v-model="form.vehicle_speed" />
+        </el-form-item>
+      </div>
+    </el-col>
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="总电压">
+          <el-input v-model="form.total_voltage" />
+        </el-form-item>
+      </div>
+    </el-col>
