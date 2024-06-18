@@ -1,6 +1,6 @@
 # Electric-car-SOC
 
-简体中文/[English](https://github.com/Ax-NET-02/Electric-car-SOC/blob/main/images/API-document.png)
+###### 🗺️简体中文/[English](https://github.com/Ax-NET-02/Electric-car-SOC/blob/main/images/API-document.png)
 
 ## 项目介绍🪄🪄🪄：
 
