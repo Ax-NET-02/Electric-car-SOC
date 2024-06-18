@@ -1,5 +1,7 @@
 # Electric-car-SOC
 
+简体中文/[English](https://github.com/Ax-NET-02/Electric-car-SOC/blob/main/images/API-document.png)
+
 ## 项目介绍🪄🪄🪄：
 
 ##### 此项目是用来预测电动汽车电池的SOC（State of Charge，充电状态🔋）的值
@@ -27,3 +29,4 @@
 ## 接口文档：
 
 ![接口图片](https://github.com/Ax-NET-02/Electric-car-SOC/blob/main/images/API-document.png)
+
