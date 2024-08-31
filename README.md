@@ -28,34 +28,37 @@
 
 
 <!-- ABOUT THE PROJECT -->
+
 ## 关于本项目
 
-[![Demo Screenshot][product-screenshot]](https://github.com/Ax-NET-02)
+[![预测模型][product-yu-test]](images/yu-test.png)
+[![训练模型][product-xun]](images/xun.png)
+
 
 1. ##### SOC 是一个非常重要的指标，用于表示电动汽车电池当前的充电量，通常以百分比表示（0%表示完全放电🪫，100%表示完全充电🔋）
 
 
 ## 项目实现
-##### 后端：
+#### 后端：
 
-###### 本项目 使用Python常用的API接口库 FastAPI
+#### 本项目 使用Python常用的API接口库 FastAPI
 
 
-##### 前端：
-  ###### 用Vue3做主体框架 向后端请求API接口
+#### 前端：
+  ##### 用Vue3做主体框架 向后端请求API接口
 
 
 ## 项目可视化
 
-- ###### 前端搭配后端api接口 实现可视化训练数据调整训练参数 预测SOC值
+1. ##### 前端搭配后端api接口 实现可视化训练数据调整训练参数 预测SOC值
 
-- ###### 也可以直接请求api接口使用 目前api接口只提供了预测SOC值 后续会添加训练和切换模型
+2. ##### 也可以直接请求api接口使用 目前api接口只提供了预测SOC值 后续会添加训练和切换模型
 
 
 
 ## 接口文档
 
-- ##### 预测SOC接口文档：
+- #### 预测SOC接口文档：
 
   ![接口图片](./images/API-document.png)
 
@@ -63,9 +66,9 @@
 
 ## 项目部署
 
-- ###### 环境准备：Python Node Vue3
+1. ##### 环境准备：Python Node Vue3
 
-- ###### 开发工具：Vscode Pycharm
+2. ##### 开发工具：Vscode Pycharm
 
 <!-- CONTRIBUTING -->
 
@@ -112,4 +115,5 @@
 [issues-url]: https://github.com/Ax-NET-02/Electric-car-SOC/issues
 [license-shield]: https://img.shields.io/github/license/Ax-NET-02/Electric-car-SOC.svg?style=for-the-badge
 [license-url]: https://github.com/Ax-NET-02/Electric-car-SOC/blob/master/LICENSE
-[product-screenshot]: images/image/screenshot.png
+[product-yu-test]: images/yu-test.png
+[product-xun]: images/xun.png
