@@ -1,27 +1,25 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Predict from '../components/predict.vue';
 import Train from '../components/train.vue';
 
-const routes: Array<RouteRecordRaw> = [
+const routes = [
   {
     path: '/',
     redirect: '/predict'
   },
   {
     path: '/predict',
-    name: 'Predict',
     component: Predict
   },
   {
     path: '/train',
-    name: 'Train',
     component: Train
   }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 });
 
 export default router;

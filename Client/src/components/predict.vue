@@ -40,7 +40,7 @@ const submitUpload = () => {
 </script>
 
 <template>
-  <el-form :model="form" label-width="auto">
+  <el-form :model="form" label-width="auto" style="margin-left: 9%;">
     <el-row :gutter="20">
       <el-col :span="12">
         <div class="grid-content">
@@ -53,7 +53,7 @@ const submitUpload = () => {
         </div>
       </el-col>
       <el-col :span="8">
-        <div class="grid-content">
+        <div class="grid-content" style="margin-left: 20%">
           <el-upload ref="uploadRef" class="upload-demo"
             action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" :auto-upload="false">
             <template #trigger>
@@ -74,6 +74,23 @@ const submitUpload = () => {
       </el-col>
     </el-row>
     <el-row :gutter="12">
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="累计里程">
+          <el-input v-model="form.cumulative_mileage" />
+        </el-form-item>
+      </div>
+    </el-col>
+
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="车速">
+          <el-input v-model="form.vehicle_speed" />
+        </el-form-item>
+      </div>
+    </el-col>
+    </el-row>
+    <el-row :gutter="12">
       <el-col :span="6">
       <div class="grid-content">
         <el-form-item label="总电压">
@@ -84,21 +101,11 @@ const submitUpload = () => {
 
     <el-col :span="6">
       <div class="grid-content">
-        <el-form-item label="累计里程">
-          <el-input v-model="form.cumulative_mileage" />
+        <el-form-item label="总电流">
+          <el-input v-model="form.total_current" />
         </el-form-item>
       </div>
     </el-col>
-    </el-row>
-    <el-row :gutter="12">
-      <el-col :span="6">
-      <div class="grid-content">
-        <el-form-item label="车速">
-          <el-input v-model="form.vehicle_speed" />
-        </el-form-item>
-      </div>
-    </el-col>
-    
     </el-row>
   </el-form>
 </template>
@@ -139,5 +146,24 @@ const submitUpload = () => {
 .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
+}
+
+.fixed-aside {
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  flex: 0 0 auto;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  overflow: hidden; /* Hide the scrollbars */
 }
 </style>

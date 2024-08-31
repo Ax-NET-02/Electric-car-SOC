@@ -1,8 +1,13 @@
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import { createApp } from 'vue'
-import router from './router'
-import App from './App.vue'
+import ElementPlus from 'element-plus';
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import 'element-plus/dist/index.css';
 
+const app = createApp(App);
+app.use(router);
+app.use(ElementPlus);
+app.mount('#app');
 
-createApp(App).use(ElementPlus).use(router).mount('#app')
+// Disable scrolling
+document.body.style.overflow = 'hidden';

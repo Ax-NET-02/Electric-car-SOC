@@ -1,5 +1,7 @@
 # Electric-car-SOC
 
+### This project is still being updated.
+
 ##### 🗺️[简体中文](./README.md)/<u>English</u>
 
 ## Project Introduction🪄🪄🪄：
@@ -30,7 +32,7 @@
 
 - ##### Predictive SOC interface documentation：
 
-  ![Interface Image](https://github.com/Ax-NET-02/Electric-car-SOC/blob/main/images/API-document.png)
+  ![Interface Image](./images/API-document.png)
 
 
 
