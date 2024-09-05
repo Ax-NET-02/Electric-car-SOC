@@ -77,7 +77,9 @@ const submitUpload = () => {
     <el-col :span="6">
       <div class="grid-content">
         <el-form-item label="累计里程">
-          <el-input v-model="form.cumulative_mileage" />
+          <el-input v-model="form.cumulative_mileage">
+            <template #append>km</template>
+          </el-input>
         </el-form-item>
       </div>
     </el-col>
@@ -85,7 +87,9 @@ const submitUpload = () => {
     <el-col :span="6">
       <div class="grid-content">
         <el-form-item label="车速">
-          <el-input v-model="form.vehicle_speed" />
+          <el-input v-model="form.vehicle_speed">
+            <template #append>km/h</template>
+          </el-input>
         </el-form-item>
       </div>
     </el-col>
@@ -94,7 +98,9 @@ const submitUpload = () => {
       <el-col :span="6">
       <div class="grid-content">
         <el-form-item label="总电压">
-          <el-input v-model="form.total_voltage" />
+          <el-input v-model="form.total_voltage">
+            <template #append>V</template>
+          </el-input>
         </el-form-item>
       </div>
     </el-col>
@@ -102,7 +108,107 @@ const submitUpload = () => {
     <el-col :span="6">
       <div class="grid-content">
         <el-form-item label="总电流">
-          <el-input v-model="form.total_current" />
+          <el-input v-model="form.total_current">
+            <template #append>A</template>
+          </el-input>
+        </el-form-item>
+      </div>
+    </el-col>
+
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="功率">
+          <el-input v-model="form.power_consumption" />
+        </el-form-item>
+      </div>
+    </el-col>
+
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="车辆状态">
+          <el-input v-model="form.vehicle_status" />
+        </el-form-item>
+      </div>
+    </el-col>
+    </el-row>
+
+    <el-row :gutter="12">
+      <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="运行模式">
+          <el-input v-model="form.operating_mode" />
+        </el-form-item>
+      </div>
+    </el-col>
+
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="故障等级">
+          <el-input v-model="form.fault_level" />
+        </el-form-item>
+      </div>
+    </el-col>
+
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="故障率">
+          <el-input v-model="form.fault_rate" />
+        </el-form-item>
+      </div>
+    </el-col>
+
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="DC-DC状态">
+          <el-input v-model="form.DCDC_Status" />
+        </el-form-item>
+      </div>
+    </el-col>
+    </el-row>
+
+    <el-row :gutter="12">
+      <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="绝缘电阻">
+          <el-input v-model="form.insulation_resistance" />
+        </el-form-item>
+      </div>
+    </el-col>
+
+    <el-col :span="6">
+      <div class="grid-content">
+        <el-form-item label="最高温度值">
+          <el-input v-model="form.maximum_temperature" />
+        </el-form-item>
+      </div>
+    </el-col>
+    </el-row>
+
+    <el-row :gutter="20">
+      <el-col :span="12">
+      <div class="grid-content">
+        <el-form-item label="最低温度值">
+          <el-input v-model="form.minimum_temperature" />
+        </el-form-item>
+      </div>
+    </el-col>
+    </el-row>
+
+    <el-row :gutter="20">
+    <el-col :span="12">
+      <div class="grid-content">
+        <el-form-item label="电池单体电压最低值">
+          <el-input v-model="form.minimumBattery_Voltage" />
+        </el-form-item>
+      </div>
+    </el-col>
+    </el-row>
+
+    <el-row :gutter="20">
+      <el-col :span="12">
+      <div class="grid-content">
+        <el-form-item label="电池单体电压最高值">
+          <el-input v-model="form.maximumBattery_Voltage" />
         </el-form-item>
       </div>
     </el-col>
