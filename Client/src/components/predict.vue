@@ -118,7 +118,9 @@ const submitUpload = () => {
     <el-col :span="6">
       <div class="grid-content">
         <el-form-item label="功率">
-          <el-input v-model="form.power_consumption" />
+          <el-input v-model="form.power_consumption">
+            <template #append>W</template>
+          </el-input>
         </el-form-item>
       </div>
     </el-col>
